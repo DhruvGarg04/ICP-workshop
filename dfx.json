@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ICPworkshop_backend": {
+      "main": "src/ICPworkshop_backend/main.mo",
+      "type": "motoko"
+    },
+    "ICPworkshop_frontend": {
+      "dependencies": [
+        "ICPworkshop_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ICPworkshop_frontend/src/index.html"
+      },
+      "source": [
+        "src/ICPworkshop_frontend/assets",
+        "dist/ICPworkshop_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
